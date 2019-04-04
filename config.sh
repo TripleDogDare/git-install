@@ -1,0 +1,5 @@
+#URL='https://www.kernel.org/pub/software/scm/git'
+#TARBALL='git-2.13.0.tar.gz'
+URL='https://mirrors.edge.kernel.org/pub/software/scm/git'
+TARBALL='git-2.21.0.tar.gz'
+SIGNATURES='https://mirrors.edge.kernel.org/pub/software/scm/git/sha256sums.asc'

@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+
+DIR=$(find . -mindepth 1 -maxdepth 1 -name 'git*' -type d)
+
+if [[ ! -d "$DIR" ]]; then
+	>&2 echo "Not a directory: $DIR"
+	exit 1
+fi
+
+cd "$DIR"
+
+make configure
+./configure --prefix=/usr
+make all doc info
+sudo make install

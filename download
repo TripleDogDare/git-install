@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+
+source config.sh
+
+wget -c "${URL}/${TARBALL}"
+tar -xvzf "$TARBALL"
+
+# TODO: Verify signatures
+grep "$TARBALL" sha256sums.asc | sha256sum -c

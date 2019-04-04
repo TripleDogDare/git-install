@@ -1,0 +1,23 @@
+#!/bin/bash
+set -euo pipefail
+
+DEPENDENCIES=()
+# general dependencies
+DEPENDENCIES+=('dh-autoreconf')
+DEPENDENCIES+=('dh-autoreconf')
+DEPENDENCIES+=('libcurl4-gnutls-dev')
+DEPENDENCIES+=('libexpat1-dev')
+DEPENDENCIES+=('gettext')
+DEPENDENCIES+=('libz-dev')
+DEPENDENCIES+=('libssl-dev')
+
+# for documentation
+DEPENDENCIES+=('asciidoc')
+DEPENDENCIES+=('xmlto')
+DEPENDENCIES+=('docbook2x')
+
+# Debian specific documentation dependency
+DEPENDENCIES+=('install-info')
+
+
+sudo apt install "${DEPENDENCIES[@]}"
